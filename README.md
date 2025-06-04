@@ -14,24 +14,6 @@ NubesLearning is a scalable, cloud-native education platform prototype built for
 
 ---
 
-## 🗂️ Folder Structure
-
-nubeslearning/
-├── backend/                 # Flask API
-│   ├── app.py
-│   ├── requirements.txt
-│   └── Dockerfile
-├── frontend/                # React App
-│   ├── public/
-│   ├── src/
-│   ├── package.json
-│   └── Dockerfile
-├── docker-compose.yml       # Optional: run both containers together
-└── README.md
-
-
----
-
 ## 🐳 Local Development with Docker
 
 ### 1. Build & run the Flask backend:
