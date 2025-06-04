@@ -24,7 +24,7 @@ docker run -p 4000:4000 nubes-backend
 
 ---
 
-2. Build & run the React frontend:
+###2. Build & run the React frontend:
 
   cd frontend
   docker build -t nubes-frontend .
