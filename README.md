@@ -21,8 +21,15 @@ NubesLearning is a scalable, cloud-native education platform prototype built for
 cd backend
 docker build -t nubes-backend .
 docker run -p 4000:4000 nubes-backend
-##
 
+---
+
+2. Build & run the React frontend:
+
+  cd frontend
+  docker build -t nubes-frontend .
+  docker run -p 3000:80 nubes-frontend
+  
 Then visit: http://localhost:3000
 
 ---
