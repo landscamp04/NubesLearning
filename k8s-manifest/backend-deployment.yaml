@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-      image: landscamp/nubes-backend:latest
+      image: 727218227857.dkr.ecr.us-west-1.amazonaws.com/nubes-backend:latest
       ports:
       - containerPort: 5000
       
