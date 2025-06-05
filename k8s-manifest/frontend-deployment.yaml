@@ -5,16 +5,19 @@ metadata:
 spec:
   replicas: 1
   selector:
-  matchLabels:
-    app: frontend
+    matchLabels:
+      app: frontend
   template:
     metadata:
       labels:
-      app: frontend
+        app: frontend
     spec:
       containers:
-      - name: frontend
-      image: 727218227857.dkr.ecr.us-west-1.amazonaws.com/nubes-frontend:latest
-      ports:
-      -containterPort: 80
+        - name: frontend
+          image: frontend:latest
+          imagePullPolicy: Never
+
+          #image: 727218227857.dkr.ecr.us-west-1.amazonaws.com/nubes-frontend:latest
+          ports:
+            - containerPort: 80
     

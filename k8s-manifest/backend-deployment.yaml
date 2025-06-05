@@ -13,8 +13,9 @@ spec:
         app: backend
     spec:
       containers:
-      - name: backend
-      image: 727218227857.dkr.ecr.us-west-1.amazonaws.com/nubes-backend:latest
-      ports:
-      - containerPort: 5000
-      
+        - name: backend
+          image: backend:latest
+          imagePullPolicy: Never
+          # image: 727218227857.dkr.ecr.us-west-1.amazonaws.com/nubes-backend:latest
+          ports:
+            - containerPort: 5000
