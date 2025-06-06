@@ -53,8 +53,20 @@ This project uses a GitHub Actions workflow for continuous integration and deliv
 ---
 
 📊 System Architecture
-
 > _See `/docs/system-architecture.png` for infrastructure details, including Terraform module structure, EKS layout, and deployment diagram.
+
+---
+
+⚠️ Deployment Disclaimer
+Note: This project is designed with production deployment on AWS EKS in mind, including:
+
+✅ Terraform-managed infrastructure (VPC, subnets, IAM, EKS)
+
+✅ Kubernetes manifests and IRSA setup
+
+✅ AWS ECR-based CI/CD pipeline
+
+However, to avoid unnecessary cloud costs during development, the application is currently run and tested using Minikube and Docker Desktop. All infrastructure code and deployment manifests are included and fully functional for EKS. The project can be deployed to a production-grade EKS cluster with minimal adjustments.
 
 ---
 
