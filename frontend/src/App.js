@@ -5,6 +5,8 @@ function App() {
 
   useEffect(() => {
     fetch('http://backend-service:5000/api/hello')
+    //or use below for local docker deployment
+    //fetch('http://localhost:4000/api/hello')
     .then(res => res.json())
     .then(data => setMessage(data.message))
     .catch(err => console.error("Error:", err));
