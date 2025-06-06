@@ -2,6 +2,7 @@
 
 ![CI](https://github.com/landscamp04/NubesLearning/actions/workflows/deploy.yml/badge.svg)
 
+## 🚀 Overview
 
 NubesLearning is a scalable, cloud-native education platform prototype built for modern web infrastructure. It features a React frontend and a Flask backend API, both containerized with Docker. This project is designed to be cloud-ready, with plans to deploy using AWS EKS, Terraform, and IAM.
 
@@ -9,13 +10,13 @@ NubesLearning is a scalable, cloud-native education platform prototype built for
 "Nubes" means "cloud" in Latin — a fitting name for a project built to thrive in cloud-native environments.
 ---
 
-## 🚀 Project Highlights
-
-- 🧠 **Frontend:** React app that communicates with a RESTful Flask backend
-- 🐍 **Backend:** Python Flask API that serves data to the frontend
-- 🐳 **Containerized:** Both services are fully Dockerized for local and cloud use
-- 📐 **Clean Structure:** Modular codebase for separation of concerns
-- ☁️ **Cloud-Ready:** Infrastructure design aligns with AWS best practices (EKS, Terraform, IAM)
+## 🧱 Tech Stack
+- React frontend
+- Node.js/Express backend
+- Docker for containerization
+- GitHub Actions for CI/CD
+- AWS ECR for image hosting
+- Terraform + EKS planned for deployment
 
 ---
 
@@ -39,18 +40,21 @@ Then visit: http://localhost:3000
 
 ---
 
-This project uses a GitHub Actions workflow to build and push Docker images to Amazon ECR:
+🔁 CI/CD Pipeline (GitHub Actions → ECR)
+This project uses a GitHub Actions workflow for continuous integration and delivery:
 
-- ✅ Automatically triggers on every push to `main`
-- 🐳 Builds frontend and backend Docker images
-- ☁️ Pushes to ECR:
-  - `727218227857.dkr.ecr.us-west-1.amazonaws.com/nubes-backend`
-  - `727218227857.dkr.ecr.us-west-1.amazonaws.com/nubes-frontend`
+- 🛠️ Automatically runs on every push to `main`
+- 🐳 Builds Docker images for frontend and backend
+- ☁️ Pushes images to Amazon ECR:
+  - [`nubes-backend`](https://console.aws.amazon.com/ecr/repositories/nubes-backend)
+  - [`nubes-frontend`](https://console.aws.amazon.com/ecr/repositories/nubes-frontend)
+- 🔐 AWS credentials are securely managed using GitHub Secrets
 
 ---
 
-💡 Why “NubesLearning”?
-"Nubes" means "cloud" in Latin — a fitting name for a project built to thrive in cloud-native environments.
+📊 System Architecture
+
+> _See `/docs/system-architecture.png` for infrastructure details, including Terraform module structure, EKS layout, and deployment diagram.
 
 ---
 
@@ -58,5 +62,6 @@ This project uses a GitHub Actions workflow to build and push Docker images to A
 Landon @landscamp04
 Cloud enthusiast | DevOps learner | Software Engineer
 
-📜 License
-MIT License – use, modify, and deploy freely.
+📄 License  
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and deploy.
+
