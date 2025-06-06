@@ -4,10 +4,10 @@
 
 ## 🚀 Overview
 
-NubesLearning is a scalable, cloud-native education platform prototype built for modern web infrastructure. It features a React frontend and a Flask backend API, both containerized with Docker. This project is designed to be cloud-ready, with plans to deploy using AWS EKS, Terraform, and IAM.
+NubesLearning is a scalable, cloud-native education platform prototype built for modern web infrastructure. It features a React frontend and a NodeJS and Express backend API, both containerized with Docker. This project is designed to be cloud-ready, with plans to deploy using AWS EKS, Terraform, and IAM.
 
 💡 Why “NubesLearning”?
-"Nubes" means "cloud" in Latin — a fitting name for a project built to thrive in cloud-native environments.
+"Nubes" means "cloud" in Latin — I thought it was clever and fits the project.
 ---
 
 ## 🧱 Tech Stack
