@@ -38,6 +38,10 @@ docker run -p 4000:4000 nubes-backend
   
 Then visit: http://localhost:3000
 
+OR
+
+run npm start in cd frontend
+
 ---
 
 🔁 CI/CD Pipeline (GitHub Actions → ECR)
