@@ -1,8 +1,10 @@
 const express = require("express");
 const AWS = require("aws-sdk"); // AWS SDK for JavaScript
-
+const cors = require("cors");
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 4000;
+
+app.use(cors());
 
 app.get('/api/hello', async (req, res) => {
     const s3 = new AWS.S3();
@@ -21,4 +23,4 @@ app.get('/api/hello', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => console.log(`backend is running on port ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => console.log(`backend is running on port ${PORT}`));

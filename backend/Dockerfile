@@ -1,22 +1,21 @@
-#This uses the official node.js base image
-
+# This uses the official node.js base image
 FROM node:18
 
-#this sets the working directory
-
+# This sets the working directory
 WORKDIR /app
 
-#Copies package.json and installs dependencies
-
+# Copies package.json and installs dependencies
 COPY package.json ./
 RUN npm install
 
-#copies app src
+# Copies app src
 COPY . .
 
-#exposes the port
+# Set the PORT environment variable
+ENV PORT=4000
 
+# Exposes the port
 EXPOSE 4000
 
-#start the application
+# Start the application
 CMD ["npm", "start"]
