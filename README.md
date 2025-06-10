@@ -47,7 +47,7 @@ run npm start in cd frontend
 Frontend demo
 
 ### 🎥 Live Demo (Downloadable)
-[Click to download or watch the demo video](Nubes-Frontend-Demo.mp4)
+[Click to download or watch the demo video](Nubes-Frontend-demo.mp4)
 
 
 🔁 CI/CD Pipeline (GitHub Actions → ECR)
