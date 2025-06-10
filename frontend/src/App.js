@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaLinkedin, FaGithub, FaRocket, FaUsers, FaCloud, FaCogs } from "react-icons/fa";
-import "./index.css"; // Assumes TailwindCSS is set up
+import "./index.css"; 
 //import architectureImg from 'C:/Users/Landon/Desktop/nubeslearning/frontend/src/assets/architecture.png';
 
 function App() {
@@ -9,15 +9,15 @@ function App() {
   const [isHovered, setIsHovered] = useState(false);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
-  // Trigger page fade-in after component mounts
+  // page fade in on load
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsPageLoaded(true);
-    }, 100); // Small delay for smoother effect
+    }, 100); //  delay for smooth effect
     return () => clearTimeout(timer);
   }, []);
 
-  // Manual fetch function for the button only
+  // fetch function for the button only
   const fetchApi = async () => {
     setIsLoading(true);
     try {
@@ -184,7 +184,7 @@ function App() {
                   System Architecture
                 </h3>
                 
-                {/* Image container - using your architectureImg */}
+                {/* Image container */}
                 <div className="w-full h-96 bg-white rounded-xl border border-gray-200 overflow-hidden">
                   <img
                     //src={architectureImg}
@@ -216,7 +216,7 @@ function App() {
             )}
           </div>
           
-          {/* Animated border effect */}
+          {/* Border animation */}
           <div className={`
             absolute inset-0 transition-all duration-700
             ${isHovered ? 'rounded-2xl' : 'rounded-full'}

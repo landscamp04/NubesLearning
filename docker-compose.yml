@@ -1,11 +1,34 @@
-version: "3"
+version: '3.8'
+
 services:
   backend:
     build: ./backend
+    container_name: nubes-backend
     ports:
       - "4000:4000"
-  
+    environment:
+      - NODE_ENV=production
+      - PORT=4000
+    networks:
+      - nubes-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4000/api/hello"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
   frontend:
     build: ./frontend
+    container_name: nubes-frontend
     ports:
-      - "3000:80"
+      - "3000:3000"
+    environment:
+      - REACT_APP_BACKEND_URL=http://backend:4000
+    depends_on:
+      - backend
+    networks:
+      - nubes-network
+
+networks:
+  nubes-network:
+    driver: bridge
