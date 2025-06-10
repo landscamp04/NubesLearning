@@ -49,6 +49,7 @@ Frontend demo
 ### 🎥 Live Demo (Downloadable)
 [Click to download and watch the demo video](Nubes-Frontend-demo.mp4)
 
+---
 
 🔁 CI/CD Pipeline (GitHub Actions → ECR)
 This project uses a GitHub Actions workflow for continuous integration and delivery:
