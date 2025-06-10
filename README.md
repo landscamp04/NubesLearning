@@ -4,7 +4,7 @@
 
 ## 🚀 Overview
 
-NubesLearning is a scalable, cloud-native education platform prototype built for modern web infrastructure. It features a React frontend and a NodeJS and Express backend API, both containerized with Docker. This project is designed to be cloud-ready, with plans to deploy using AWS EKS, Terraform, and IAM.
+NubesLearning is a scalable, cloud-native education platform prototype built for modern web infrastructure. It features a React and Tailwind CSS frontend, and a NodeJS and Express backend API, both containerized with Docker. This project is designed to be cloud-ready, with plans to deploy using AWS EKS, Terraform, and IAM.
 
 💡 Why “NubesLearning”?
 "Nubes" means "cloud" in Latin — I thought it was clever and fits the project.
@@ -53,7 +53,7 @@ This project uses a GitHub Actions workflow for continuous integration and deliv
 ---
 
 📊 System Architecture
-> _See `/docs/system-architecture.png` for infrastructure details, including Terraform module structure, EKS layout, and deployment diagram.
+> _See `/frontend/src/assets/architecture.png` for infrastructure details, including Terraform module structure, EKS layout, and deployment diagram.
 
 ---
 
@@ -67,6 +67,26 @@ Note: This project is designed with production deployment on AWS EKS in mind, in
 ✅ AWS ECR-based CI/CD pipeline
 
 However, to avoid unnecessary cloud costs during development, the application is currently run and tested using Minikube and Docker Desktop. All infrastructure code and deployment manifests are included and fully functional for EKS. The project can be deployed to a production-grade EKS cluster with minimal adjustments.
+
+---
+
+🔐 IAM Roles & Policies
+- To maintain secure access control, I created IAM roles and policies for:
+
+- EKS cluster and node groups – granting only the permissions necessary to interact with Kubernetes resources.
+
+- IRSA (IAM Roles for Service Accounts) – allowing fine-grained permissions for pods to access AWS services like  DynamoDB and S3 securely, without using static credentials.
+This ensures that each component only has access to what it needs, following the principle of least privilege.
+
+---
+
+📡 VPC, Subnets & Networking
+I created 3 public and 3 private subnets across multiple availability zones to follow AWS best practices for high availability and fault tolerance.
+
+Public subnets are used for internet-facing resources like the frontend and load balancer.
+
+Private subnets (commented out during testing to avoid charges) are reserved for backend services and databases that should not be directly exposed to the internet.
+This design mimics real-world production-grade networking used in cloud environments.
 
 ---
 
